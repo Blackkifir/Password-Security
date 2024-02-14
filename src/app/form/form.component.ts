@@ -84,4 +84,20 @@ export class FormComponent {
       }
     }
   }
+
+  submitPassword(event: Event) {
+    event.preventDefault();
+
+    console.log(`password: ${this.password}`);
+    this.password = '';
+    this.selectLength = 0;
+    this.selectStrength = 0;
+    this.selectWeak = 0;
+    this.labelLength = '';
+    this.labelStrength = '';
+    this.labelWeak = '';
+    this.classLength = this.stylesArr[0];
+    this.classStrength = this.stylesArr[0];
+    this.classWeak = this.stylesArr[0];
+  }
 }
