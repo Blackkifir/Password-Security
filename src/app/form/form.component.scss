@@ -1,0 +1,32 @@
+.form {
+  padding: 25px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  width: 400px;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__password {
+      transition: all .2s;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    &__password:hover {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+    }
+     
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+  
+  &__text {
+    font-size: 13px;
+  }
+}
