@@ -1,18 +1,34 @@
 <form class="form">
-  <div class="form__block">
-    <h3 class="form__block__title">Please write here</h3>
-    <input class="form__block__password" type="password" />
-  <div class="form__length">
-    <p class="form__text">length password</p>
-    <progress value="70" max="100"></progress>
+  <div class="form__parentBlock">
+    <h3 class="form__parentBlock__title">Please write here</h3>
+    <input
+      name="password"
+      class="form__parentBlock__password"
+      (input)="checkPassword()"
+      [(ngModel)]="password"
+      type="text"
+      placeholder="Enter your password"
+    />
+  <div class="form__blockProgress">
+    <div class="form__blockDetail">
+      <p class="form__blockDetail__detail">Length: &nbsp;</p>
+      <p class="form__blockDetail__text">{{labelLength}}</p>
+    </div>
+    <progress class="form__blockProgress__length" [ngClass]="classLength" [value]="selectLength" max="100"></progress>
   </div>
-  <div class="form__weak">
-    <p class="form__text">weak password</p>
-    <progress value="70" max="100"></progress>
+  <div class="form__blockProgress">
+    <div class="form__blockDetail">
+      <p class="form__blockDetail__detail">Weakness: &nbsp;</p>
+      <p class="form__blockDetail__text">{{labelWeak}}</p>
+    </div>
+    <progress class="form__blockProgress__weak" [ngClass]="classWeak" [value]="selectWeak" max="100"></progress>
   </div>
-  <div class="form__strength">
-    <p class="form__text">strength password</p>
-    <progress value="70" max="100"></progress>
+  <div class="form__blockProgress">
+    <div class="form__blockDetail">
+      <p class="form__blockDetail__detail">Strength: &nbsp;</p>
+      <p class="form__blockDetail__text">{{labelStrength}}</p>
+    </div>
+    <progress class="form__blockProgress__strength" [ngClass]="classStrength" [value]="selectStrength" max="100"></progress>
   </div>
-  </div>
+</div>
 </form>
